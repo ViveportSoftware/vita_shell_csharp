@@ -142,7 +142,7 @@ Task("Run-Sonar-Begin")
     SonarBegin(
             new SonarBeginSettings
             {
-                    Key = "ViveportSoftware_vita_core_csharp",
+                    Key = "ViveportSoftware_vita_shell_csharp",
                     Login = sonarcloudApiKey,
                     OpenCoverReportsPath = "**/*.OpenCover.xml",
                     Organization = "viveportsoftware",
