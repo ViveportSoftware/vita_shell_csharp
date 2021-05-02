@@ -102,7 +102,9 @@ namespace Htc.Vita.Shell
             }
             finally
             {
+#pragma warning disable CA1416
                 Marshal.FinalReleaseComObject(wshShell);
+#pragma warning restore CA1416
             }
 
             try
@@ -136,7 +138,9 @@ namespace Htc.Vita.Shell
             }
             finally
             {
+#pragma warning disable CA1416
                 Marshal.FinalReleaseComObject(wshShortcut);
+#pragma warning restore CA1416
             }
             return false;
         }

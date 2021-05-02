@@ -49,7 +49,9 @@ namespace Htc.Vita.Shell.Interop
                 }
                 if (Marshal.IsComObject(_shellLink))
                 {
+#pragma warning disable CA1416
                     Marshal.ReleaseComObject(_shellLink);
+#pragma warning restore CA1416
                 }
                 _shellLink = null;
 
