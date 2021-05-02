@@ -1,5 +1,9 @@
 # HTC Vita Shell Libraries for .NET platform (Htc.Vita.Shell)
 
+[![MyGet Badge](https://buildstats.info/myget/viveportsoftware/Htc.Vita.Shell)](https://www.myget.org/feed/viveportsoftware/package/nuget/Htc.Vita.Shell)
+
+[![Build status](https://ci.appveyor.com/api/projects/status/b7mo9dw9gxcb9rh9/branch/master?svg=true)](https://ci.appveyor.com/project/kenelin/vita-shell-csharp/branch/master)
+
 ## Dependency
 
 Compile-time dependencies:
