@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using Htc.Vita.Core.Log;
 using Htc.Vita.Core.Util;
 
@@ -9,6 +10,9 @@ namespace Htc.Vita.Shell
     /// </summary>
     public abstract class IconManager
     {
+        /// <summary>
+        /// Initializes static members of the <see cref="IconManager"/> class.
+        /// </summary>
         static IconManager()
         {
             TypeRegistry.RegisterDefault<IconManager, DefaultIconManager>();
@@ -45,6 +49,42 @@ namespace Htc.Vita.Shell
         }
 
         /// <summary>
+        /// Extracts the icon from file.
+        /// </summary>
+        /// <param name="fromFile">Source file.</param>
+        /// <param name="toIcon">Target icon.</param>
+        /// <returns><c>true</c> if extracting icon from file successfully, <c>false</c> otherwise.</returns>
+        public bool ExtractIconFromFile(
+                FileInfo fromFile,
+                FileInfo toIcon)
+        {
+            if (fromFile == null || toIcon == null)
+            {
+                return false;
+            }
+
+            var realFromFile = new FileInfo(fromFile.FullName);
+            if (!realFromFile.Exists)
+            {
+                return false;
+            }
+
+            var result = false;
+            try
+            {
+                result = OnExtractIconFromFile(
+                        realFromFile,
+                        new FileInfo(toIcon.FullName)
+                );
+            }
+            catch (Exception e)
+            {
+                Logger.GetInstance(typeof(IconManager)).Error(e.ToString());
+            }
+            return result;
+        }
+
+        /// <summary>
         /// Flushes the shell cache.
         /// </summary>
         /// <returns><c>true</c> if flushing the shell cache successfully, <c>false</c> otherwise.</returns>
@@ -62,6 +102,16 @@ namespace Htc.Vita.Shell
             return result;
         }
 
+        /// <summary>
+        /// Called when extracting icon from file.
+        /// </summary>
+        /// <param name="fromFile">Source file.</param>
+        /// <param name="toIcon">Target icon.</param>
+        /// <returns><c>true</c> if extracting icon from file successfully, <c>false</c> otherwise.</returns>
+        protected abstract bool OnExtractIconFromFile(
+                FileInfo fromFile,
+                FileInfo toIcon
+        );
         /// <summary>
         /// Called when flushing shell cache.
         /// </summary>
