@@ -29,12 +29,30 @@ namespace Htc.Vita.Shell
             public string Name { get; set; } = string.Empty;
         }
 
+        /// <summary>
+        /// Enum GetUriSchemeStatus
+        /// </summary>
         public enum GetUriSchemeStatus
         {
+            /// <summary>
+            /// Unknown
+            /// </summary>
             Unknown,
+            /// <summary>
+            /// Ok
+            /// </summary>
             Ok,
+            /// <summary>
+            /// Invalid data
+            /// </summary>
             InvalidData,
+            /// <summary>
+            /// Not available
+            /// </summary>
             NotAvailable,
+            /// <summary>
+            /// Unsupported platform
+            /// </summary>
             UnsupportedPlatform
         }
     }

@@ -268,10 +268,8 @@ namespace Htc.Vita.Shell.Interop
         [StructLayout(LayoutKind.Explicit)]
         internal struct PropVariant : IEquatable<PropVariant>
         {
-            [FieldOffset(0)]
-            internal readonly /* VARTYPE */ ushort vt;
-            [FieldOffset(8)]
-            internal readonly /* union   */ IntPtr unionMember;
+            [FieldOffset(0)] internal readonly /* VARTYPE */ ushort vt;
+            [FieldOffset(8)] internal readonly /* union   */ IntPtr unionMember;
 
             internal PropVariant(Guid data)
             {
