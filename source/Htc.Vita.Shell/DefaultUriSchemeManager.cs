@@ -31,10 +31,12 @@ namespace Htc.Vita.Shell
             ProtocolCommandPathWhitelist.Add(GetProtocolCommandPathKey("http", "firefox.exe"));
             ProtocolCommandPathWhitelist.Add(GetProtocolCommandPathKey("http", "iexplore.exe"));
             ProtocolCommandPathWhitelist.Add(GetProtocolCommandPathKey("http", "launchwinapp.exe"));
+            ProtocolCommandPathWhitelist.Add(GetProtocolCommandPathKey("http", "msedge.exe"));
             ProtocolCommandPathWhitelist.Add(GetProtocolCommandPathKey("https", "chrome.exe"));
             ProtocolCommandPathWhitelist.Add(GetProtocolCommandPathKey("https", "firefox.exe"));
             ProtocolCommandPathWhitelist.Add(GetProtocolCommandPathKey("https", "iexplore.exe"));
             ProtocolCommandPathWhitelist.Add(GetProtocolCommandPathKey("https", "launchwinapp.exe"));
+            ProtocolCommandPathWhitelist.Add(GetProtocolCommandPathKey("https", "msedge.exe"));
         }
 
         private static KeyValuePair<string, string> GetCommandPair(string launcherCommand)
