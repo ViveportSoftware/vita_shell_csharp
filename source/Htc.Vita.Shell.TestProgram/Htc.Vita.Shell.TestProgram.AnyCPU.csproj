@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Htc.Vita.Shell.TestProgram</RootNamespace>
+    <AssemblyName>Htc.Vita.Shell.TestProgram</AssemblyName>
+    <TargetFrameworks>net45;netcoreapp3.1</TargetFrameworks>
+    <DebugType>portable</DebugType>
+    <IntermediateOutputPath>..\..\temp\$(Configuration)\$(AssemblyName)\obj\AnyCPU</IntermediateOutputPath>
+    <OutputPath>..\..\temp\$(Configuration)\$(AssemblyName)\bin\AnyCPU</OutputPath>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <LangVersion>6</LangVersion>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>Resources\Application.ico</ApplicationIcon>
+    <ApplicationManifest>App.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\generated\SharedAssemblyInfo.cs" Link="Properties\SharedAssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Htc.Vita.Shell\Htc.Vita.Shell.csproj" />
+  </ItemGroup>
+</Project>

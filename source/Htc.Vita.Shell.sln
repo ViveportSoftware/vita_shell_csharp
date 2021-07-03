@@ -6,7 +6,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Htc.Vita.Shell", "Htc.Vita.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Htc.Vita.Shell.Tests.AnyCPU", "Htc.Vita.Shell.Tests\Htc.Vita.Shell.Tests.AnyCPU.csproj", "{79B2B5AC-F35C-43BC-8686-54596F0065F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Htc.Vita.Shell.Tests.x86", "Htc.Vita.Shell.Tests\Htc.Vita.Shell.Tests.x86.csproj", "{85114CEF-7CBE-4F34-B66B-F88B176C3B7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Htc.Vita.Shell.Tests.x86", "Htc.Vita.Shell.Tests\Htc.Vita.Shell.Tests.x86.csproj", "{85114CEF-7CBE-4F34-B66B-F88B176C3B7B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Htc.Vita.Shell.TestProgram.AnyCPU", "Htc.Vita.Shell.TestProgram\Htc.Vita.Shell.TestProgram.AnyCPU.csproj", "{5D270CEC-9543-4BA4-80BC-0081DF290C4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Htc.Vita.Shell.TestProgram.x86", "Htc.Vita.Shell.TestProgram\Htc.Vita.Shell.TestProgram.x86.csproj", "{0FD5262E-7886-4E0B-98B8-97351519237C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +44,22 @@ Global
 		{85114CEF-7CBE-4F34-B66B-F88B176C3B7B}.Release|AnyCPU.Build.0 = Release|Any CPU
 		{85114CEF-7CBE-4F34-B66B-F88B176C3B7B}.Release|x86.ActiveCfg = Release|Any CPU
 		{85114CEF-7CBE-4F34-B66B-F88B176C3B7B}.Release|x86.Build.0 = Release|Any CPU
+		{5D270CEC-9543-4BA4-80BC-0081DF290C4A}.Debug|AnyCPU.ActiveCfg = Debug|Any CPU
+		{5D270CEC-9543-4BA4-80BC-0081DF290C4A}.Debug|AnyCPU.Build.0 = Debug|Any CPU
+		{5D270CEC-9543-4BA4-80BC-0081DF290C4A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5D270CEC-9543-4BA4-80BC-0081DF290C4A}.Debug|x86.Build.0 = Debug|Any CPU
+		{5D270CEC-9543-4BA4-80BC-0081DF290C4A}.Release|AnyCPU.ActiveCfg = Release|Any CPU
+		{5D270CEC-9543-4BA4-80BC-0081DF290C4A}.Release|AnyCPU.Build.0 = Release|Any CPU
+		{5D270CEC-9543-4BA4-80BC-0081DF290C4A}.Release|x86.ActiveCfg = Release|Any CPU
+		{5D270CEC-9543-4BA4-80BC-0081DF290C4A}.Release|x86.Build.0 = Release|Any CPU
+		{0FD5262E-7886-4E0B-98B8-97351519237C}.Debug|AnyCPU.ActiveCfg = Debug|Any CPU
+		{0FD5262E-7886-4E0B-98B8-97351519237C}.Debug|AnyCPU.Build.0 = Debug|Any CPU
+		{0FD5262E-7886-4E0B-98B8-97351519237C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0FD5262E-7886-4E0B-98B8-97351519237C}.Debug|x86.Build.0 = Debug|Any CPU
+		{0FD5262E-7886-4E0B-98B8-97351519237C}.Release|AnyCPU.ActiveCfg = Release|Any CPU
+		{0FD5262E-7886-4E0B-98B8-97351519237C}.Release|AnyCPU.Build.0 = Release|Any CPU
+		{0FD5262E-7886-4E0B-98B8-97351519237C}.Release|x86.ActiveCfg = Release|Any CPU
+		{0FD5262E-7886-4E0B-98B8-97351519237C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

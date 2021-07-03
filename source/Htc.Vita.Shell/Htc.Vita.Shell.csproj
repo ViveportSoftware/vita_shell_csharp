@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <RootNamespace>Htc.Vita.Shell</RootNamespace>
     <AssemblyName>Htc.Vita.Shell</AssemblyName>
-    <TargetFrameworks>net45;netstandard2.0;net5.0</TargetFrameworks>
+    <TargetFrameworks>net45;netcoreapp3.1</TargetFrameworks>
     <DebugType>portable</DebugType>
     <IntermediateOutputPath>..\..\temp\$(Configuration)\$(AssemblyName)\obj</IntermediateOutputPath>
     <OutputPath>..\..\temp\$(Configuration)\$(AssemblyName)\bin</OutputPath>
@@ -12,6 +12,7 @@
     <LangVersion>6</LangVersion>
     <Prefer32Bit>false</Prefer32Bit>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <UseWindowsForms>true</UseWindowsForms>
     <Authors>HTC</Authors>
     <PackageDescription>HTC Vita Shell module</PackageDescription>
     <PackageProjectUrl>https://github.com/ViveportSoftware/vita_shell_csharp/</PackageProjectUrl>
@@ -23,7 +24,7 @@
   <ItemGroup>
     <Compile Include="..\generated\SharedAssemblyInfo.cs" Link="Properties\SharedAssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
     <PackageReference Include="System.Drawing.Common" Version="4.5.0" />
   </ItemGroup>
 </Project>
