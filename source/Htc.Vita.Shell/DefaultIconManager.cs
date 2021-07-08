@@ -3,7 +3,6 @@ using System.Drawing;
 using System.IO;
 using Htc.Vita.Core.Log;
 using Htc.Vita.Core.Runtime;
-using Htc.Vita.Shell.Interop;
 
 namespace Htc.Vita.Shell
 {
@@ -63,9 +62,9 @@ namespace Htc.Vita.Shell
             var result = false;
             try
             {
-                Windows.SHChangeNotify(
-                        Windows.ShellChangeNotifyEventIds.AssociationChanged,
-                        Windows.ShellChangeNotifyFlags.IdList,
+                Interop.Windows.SHChangeNotify(
+                        Interop.Windows.ShellChangeNotifyEventIds.AssociationChanged,
+                        Interop.Windows.ShellChangeNotifyFlags.IdList,
                         IntPtr.Zero,
                         IntPtr.Zero
                 );

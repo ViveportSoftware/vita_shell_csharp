@@ -4,7 +4,6 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using Htc.Vita.Core.Log;
 using Htc.Vita.Core.Runtime;
-using Htc.Vita.Shell.Interop;
 
 namespace Htc.Vita.Shell
 {
@@ -15,19 +14,19 @@ namespace Htc.Vita.Shell
     /// <seealso cref="LinkManager" />
     public class DefaultLinkManager : LinkManager
     {
-        private static Windows.ShowWindowCommand ConvertFrom(ShellLinkWindowState windowState)
+        private static Interop.Windows.ShowWindowCommand ConvertFrom(ShellLinkWindowState windowState)
         {
             if (windowState == ShellLinkWindowState.Maximized)
             {
-                return Windows.ShowWindowCommand.ShowMaximized;
+                return Interop.Windows.ShowWindowCommand.ShowMaximized;
             }
 
             if (windowState == ShellLinkWindowState.Minimized)
             {
-                return Windows.ShowWindowCommand.ShowMinNoActive;
+                return Interop.Windows.ShowWindowCommand.ShowMinNoActive;
             }
 
-            return Windows.ShowWindowCommand.ShowNormal;
+            return Interop.Windows.ShowWindowCommand.ShowNormal;
         }
 
         /// <inheritdoc />
@@ -180,7 +179,7 @@ namespace Htc.Vita.Shell
             var sourceArguments = shellLinkInfo.SourceArguments;
             var sourceShowWindowCommand = ConvertFrom(shellLinkInfo.SourceWindowState);
 
-            using (var windowShellLink = Windows.ShellLink.GetInstance())
+            using (var windowShellLink = Interop.Windows.ShellLink.GetInstance())
             {
                 var success = windowShellLink.SetSourcePath(sourcePath);
                 if (!success)
